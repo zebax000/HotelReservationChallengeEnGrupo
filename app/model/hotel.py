@@ -19,7 +19,13 @@ class Guest:
 # TODO: Implement Reservation class here
 
 
-# TODO: Implement Room class here
+class Room:
+
+    def __init__(self, number: int, type_: str, price_per_night: float):
+        self.number: int = number
+        self.type_: str = type_
+        self.price_per_night: float = price_per_night
+        self.availability: dict[date, str | None] = {}
 
 
 # TODO: Implement Hotel class here
