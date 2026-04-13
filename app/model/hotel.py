@@ -8,6 +8,11 @@ from app.services.util import (generate_unique_id, date_lower_than_today_error,
 
 
 # TODO: Implement Guest class here
+@dataclass
+class Guest:
+    REGULAR: str = 'Regular'
+    VIP: str = 'Vip'
+    name: str = 'Name'
 
 
 # TODO: Implement Reservation class here
