@@ -13,6 +13,7 @@ class Guest:
     REGULAR: str = 'Regular'
     VIP: str = 'Vip'
     name: str = 'Name'
+    email: str = 'Email'
 
 
 # TODO: Implement Reservation class here
