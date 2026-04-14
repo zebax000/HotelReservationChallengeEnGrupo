@@ -83,3 +83,32 @@ class Hotel:
         if number in sel.rooms:
             ro
 
+
+@dataclass
+class HotelService:
+    name: str
+    price: float
+    description: str = ""
+    date_used: date | None = None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
