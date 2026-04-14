@@ -45,4 +45,6 @@ class Hotel:
         reservations: dict[str, Reservation] = {}
 
     def __add_room__(self, number: int, type_: str, price_per_night: float):
+        if number in sel.rooms:
+            ro
 
