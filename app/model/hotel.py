@@ -110,13 +110,7 @@ class Hotel:
             room = Room(number, type_, price_per_night)
             self.rooms[number] = room
     def make_reservation(self, gest_name: str, description: str, room_number: int, check_in: date, check_out: date ):
-
-
-
-
-
-
-
+        ...
 
 
 
