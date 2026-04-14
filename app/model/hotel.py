@@ -23,3 +23,11 @@ class Guest:
 
 
 # TODO: Implement Hotel class here
+
+class Hotel:
+    def __init__(self):
+        rooms: dict[int, Room] = {}
+        reservations: dict[str, Reservation] = {}
+
+    def __add_room__(self, number: int, type_: str, price_per_night: float):
+
