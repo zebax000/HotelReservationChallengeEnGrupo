@@ -79,7 +79,20 @@ class Hotel:
         rooms: dict[int, Room] = {}
         reservations: dict[str, Reservation] = {}
 
-    def __add_room__(self, number: int, type_: str, price_per_night: float):
-        if number in sel.rooms:
-            ro
+    def add_room(self, number: int, type_: str, price_per_night: float):
+        if number in self.rooms:
+            room_already_exists_error()
+        else:
+            room = Room(number, type_, price_per_night)
+            self.rooms[number] = room
+    def make_reservation(self, gest_name: str, description: str, room_number: int, check_in: date, check_out: date ):
+
+
+
+
+
+
+
+
+
 
