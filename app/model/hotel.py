@@ -27,6 +27,7 @@ class Reservation:
     check_out: date
     guest: list[Guest] = field(init =  False, default_factory = list)
     id: str = field(default_factory = generate_unique_id())
+    services: list["HotelService"] = field(default_factory=list)
 
     def add_guest(self, name, email, type_=Guest.REGULAR):
         guest = Guest(name, email, type_)
