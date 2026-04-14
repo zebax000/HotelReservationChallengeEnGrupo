@@ -29,12 +29,27 @@ class Room:
 
         self._init_availability()
 
-    def _init_availability(self):
+    def _init_availability(self) -> None:
         today = datetime.now().date()
-
         for i in range(365):
-            current_day = today + timedelta(days=i)
-            self.availability[current_day] = None
+            current_date = today + timedelta(days=i)
+            self.availability[current_date] = None
+
+    def book(self, reservation_id: str, check_in: date, check_out: date) -> None:
+        current_date = check_in
+        dates_to_book = []
+
+        while current_date < check_out:
+            if self.availability.get(current_date) is not None:
+                room_not_available_error()
+                return
+            dates_to_book.append(current_date)
+            current_date += timedelta(days=1)
+
+        for booked_date in dates_to_book:
+            self.availability[booked_date] = reservation_id
+
+
 
 
 # TODO: Implement Hotel class here
