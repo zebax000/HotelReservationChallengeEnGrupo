@@ -91,6 +91,11 @@ class HotelService:
     description: str = ""
     date_used: date | None = None
 
+    def __str__(self) -> str:
+        date_info = f" | Date: {self.date_used}" if self.date_used else ""
+        return f"Service: {self.name} | Price: ${self.price}{date_info} | Description: {self.description}"
+
+
 
 
 
