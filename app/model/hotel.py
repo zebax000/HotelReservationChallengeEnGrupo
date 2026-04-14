@@ -32,14 +32,15 @@ class Reservation:
         guest = Guest(name, email, type_)
         self.guest.append(guest)
         return guest
+
     def delete_guest(self,guest_index = int):
-        if self.id
+        if 0 <= guest_index < len(self.guest):
+            self.guest.pop(guest_index)
+        else:
+            guest_not_found_error()
 
-
-
-
-
-
+    def __len__(self):
+        return (self.check_out - self.check_in).days
 
 
 class Room:
